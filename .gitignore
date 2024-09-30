@@ -1,0 +1,4 @@
+# Ignoring .txt 
+*.txt
+
+.DS_Store
