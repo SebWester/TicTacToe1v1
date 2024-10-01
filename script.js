@@ -79,3 +79,17 @@ const allboxes = [
   [boxD, boxE, boxF], // Row two
   [boxG, boxH, boxI], // Row three
 ];
+
+const winningCombinations = [
+  // ROWS
+  [allboxes[0][0], allboxes[0][1], allboxes[0][2]],
+  [allboxes[1][0], allboxes[1][1], allboxes[1][2]],
+  [allboxes[2][0], allboxes[2][1], allboxes[2][2]],
+  // COLS
+  [allboxes[0][0], allboxes[1][0], allboxes[2][0]],
+  [allboxes[0][1], allboxes[1][1], allboxes[2][1]],
+  [allboxes[0][2], allboxes[1][2], allboxes[2][2]],
+  // VERTICALLY
+  [allboxes[0][0], allboxes[1][1], allboxes[2][2]],
+  [allboxes[0][2], allboxes[1][1], allboxes[2][0]],
+];
