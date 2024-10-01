@@ -5,6 +5,7 @@
 #mainContainer {
   width: 100vw;
   height: 100vh;
+  display: flex;
 }
 
 #gameContainer {
@@ -47,6 +48,7 @@
   font-size: 13em;
 }
 
+/* Javascript activated styles */
 .greenHover {
   background-color: rgba(45, 200, 45, 0.7);
 }
