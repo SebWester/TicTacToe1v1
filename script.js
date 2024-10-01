@@ -59,7 +59,7 @@ box.forEach((emptyBox) => {
         if (winner) {
           winBox.style.display = "flex";
           winBox.innerHTML = `${winner} wins!`;
-          // No hover if totalClicks = 420
+          // No hover if totalClicks = 420, magic numbers ftw
           totalClicks = 420;
 
           if (winner === "X") {
