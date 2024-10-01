@@ -27,3 +27,21 @@
   justify-content: center;
   font-size: 13em;
 }
+
+.greenHover {
+  background-color: rgba(45, 200, 45, 0.7);
+}
+
+.redHover {
+  background-color: rgba(235, 55, 55, 0.7);
+}
+
+.filledGreen {
+  background-color: rgba(89, 196, 89, 0.5);
+  color: green;
+}
+
+.filledRed {
+  background-color: rgba(230, 82, 82, 0.5);
+  color: red;
+}
