@@ -1,3 +1,4 @@
+const resetBtn = document.getElementById("resetBtn");
 const box = document.querySelectorAll(".box");
 const winBox = document.getElementById("winner");
 
@@ -7,7 +8,7 @@ function boxHover(x) {
     if (hover.innerHTML === "") {
       hover.addEventListener("mouseover", function () {
         hover.style.cursor = "pointer";
-        if (hover.innerHTML != "") {
+        if (hover.innerHTML != "" || totalClicks === 420) {
           hover.style.cursor = "not-allowed";
           hover.removeEventListener;
         } else if (x % 2 === 0) {
@@ -58,6 +59,9 @@ box.forEach((emptyBox) => {
         if (winner) {
           winBox.style.display = "flex";
           winBox.innerHTML = `${winner} wins!`;
+          // No hover if totalClicks = 420
+          totalClicks = 420;
+
           if (winner === "X") {
             document.body.classList.add("greenWinner");
             winBox.style.backgroundColor = "rgba(0, 100, 0, 0.6)";
@@ -73,10 +77,20 @@ box.forEach((emptyBox) => {
       }
     });
   }
+  // Reset logic here
+  resetBtn.addEventListener("click", function () {
+    // Reset game board
+    emptyBox.innerHTML = "";
+    emptyBox.classList.remove("filledGreen");
+    emptyBox.classList.remove("filledRed");
+    document.body.classList.remove("greenWinner");
+    document.body.classList.remove("redWinner");
+    winBox.style.display = "none";
+    totalClicks = 0;
+  });
 });
 
 // All unique boxes
-
 // Row one
 const boxA = document.getElementById("a");
 const boxB = document.getElementById("b");

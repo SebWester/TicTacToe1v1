@@ -12,9 +12,28 @@
   height: 600px;
   border: 1px solid rgb(55, 57, 66);
   margin: 60px auto;
+  margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   font-family: monospace;
+}
+
+#resetDiv {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+#resetBtn {
+  text-align: center;
+  font-size: 1.3em;
+  border-radius: 6px;
+}
+
+#resetBtn:hover {
+  cursor: pointer;
+  background-color: rgb(109, 109, 109);
+  color: white;
 }
 
 .box {
