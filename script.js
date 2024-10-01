@@ -93,3 +93,15 @@ const winningCombinations = [
   [allboxes[0][0], allboxes[1][1], allboxes[2][2]],
   [allboxes[0][2], allboxes[1][1], allboxes[2][0]],
 ];
+
+// Win game-logic
+
+function checkWinner() {
+  // for-of-loop, iterating through winningCombination
+  for (let combination of winningCombinations) {
+    const [box1, box2, box3] = combination;
+
+    // Check if all boxes has the same innerHtml and not empty
+    // Code goes here..
+  }
+}
