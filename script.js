@@ -1,4 +1,5 @@
 const box = document.querySelectorAll(".box");
+const winBox = document.getElementById("winner");
 
 // Adds bg-color when box is hovered
 function boxHover(x) {
@@ -52,6 +53,21 @@ box.forEach((emptyBox) => {
           emptyBox.classList.add("filledRed");
         }
 
+        // Check if someone wins
+        const winner = checkWinner();
+        if (winner) {
+          winBox.style.display = "flex";
+          winBox.innerHTML = `${winner} wins!`;
+          if (winner === "X") {
+            document.body.classList.add("greenWinner");
+            winBox.style.backgroundColor = "rgba(0, 100, 0, 0.6)";
+          } else if (winner === "O") {
+            document.body.classList.add("redWinner");
+            winBox.style.backgroundColor = "rgba(100, 0, 0, 0.6)";
+          }
+          console.log(`${winner} wins!`);
+        }
+
         // Hover P1 = Green, hover P2 = Red
         boxHover(totalClicks);
       }
@@ -80,6 +96,7 @@ const allboxes = [
   [boxG, boxH, boxI], // Row three
 ];
 
+// Win game-logic
 const winningCombinations = [
   // ROWS
   [allboxes[0][0], allboxes[0][1], allboxes[0][2]],
@@ -94,14 +111,19 @@ const winningCombinations = [
   [allboxes[0][2], allboxes[1][1], allboxes[2][0]],
 ];
 
-// Win game-logic
-
 function checkWinner() {
   // for-of-loop, iterating through winningCombination
   for (let combination of winningCombinations) {
     const [box1, box2, box3] = combination;
 
     // Check if all boxes has the same innerHtml and not empty
-    // Code goes here..
+    if (
+      box1.innerHTML !== "" &&
+      box1.innerHTML === box2.innerHTML &&
+      box1.innerHTML === box3.innerHTML
+    ) {
+      return box1.innerHTML; // Returns X or O
+    }
   }
+  return null; // While no winner
 }

@@ -45,3 +45,26 @@
   background-color: rgba(230, 82, 82, 0.5);
   color: red;
 }
+
+.greenWinner {
+  background-color: rgba(50, 240, 50, 0.6);
+  color: white;
+}
+
+.redWinner {
+  background-color: rgba(240, 50, 50, 0.6);
+  color: white;
+}
+
+#winner {
+  display: none;
+  width: fit-content;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  font-size: 14em;
+  position: absolute;
+  left: calc(50vw - 351px);
+  top: calc(50vh - 165px);
+  border-radius: 20px;
+}
