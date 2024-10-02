@@ -6,13 +6,52 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #gameContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.player {
+  width: fit-content;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.player h2 {
+  font-size: 2em;
+}
+
+#p1 {
+  margin-right: 10px;
+  align-items: flex-end;
+  color: rgb(24, 107, 24);
+}
+#p2 {
+  margin-left: 10px;
+  align-items: flex-start;
+  color: rgb(161, 0, 0);
+}
+
+#p1 p,
+#p2 p {
+  align-self: center;
+  margin-top: 10px;
+  font-size: 2.5em;
+}
+
+#gamePlan {
   width: 600px;
   height: 600px;
   border: 1px solid rgb(55, 57, 66);
-  margin: 60px auto;
+  /* margin: 60px auto; */
   margin-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +61,7 @@
 #resetDiv {
   width: fit-content;
   height: fit-content;
-  margin: auto;
+  margin: 10px auto;
 }
 
 #resetBtn {

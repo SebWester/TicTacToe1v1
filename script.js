@@ -2,6 +2,14 @@ const resetBtn = document.getElementById("resetBtn");
 const box = document.querySelectorAll(".box");
 const winBox = document.getElementById("winner");
 
+const pointsP1 = document.getElementById("pointsOne");
+const pointsP2 = document.getElementById("pointsTwo");
+let addPoint1 = 0;
+let addPoint2 = 0;
+
+pointsP1.innerHTML = `${addPoint1}`;
+pointsP2.innerHTML = `${addPoint2}`;
+
 // Adds bg-color when box is hovered
 function boxHover(x) {
   box.forEach((hover) => {
@@ -65,10 +73,16 @@ box.forEach((emptyBox) => {
           if (winner === "X") {
             document.body.classList.add("greenWinner");
             winBox.style.backgroundColor = "rgba(0, 100, 0, 0.6)";
+            addPoint1++;
+            pointsP1.innerHTML = `${addPoint1}`;
           } else if (winner === "O") {
             document.body.classList.add("redWinner");
             winBox.style.backgroundColor = "rgba(100, 0, 0, 0.6)";
+            addPoint2++;
+            pointsP2.innerHTML = `${addPoint2}`;
           }
+          console.log(`P1: ${addPoint1} point(s)`);
+          console.log(`P2: ${addPoint2} point(s)`);
           console.log(`${winner} wins!`);
         }
 

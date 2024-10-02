@@ -3,32 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tre I Rad V2</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="maincontainer">
-      <div id="winner"></div>
+    <div id="mainContainer">
       <div id="gameContainer">
-        <div id="rowOne">
-          <div class="box" id="a"></div>
-          <div class="box" id="b"></div>
-          <div class="box" id="c"></div>
+        <div id="winner"></div>
+        <!-- Player 1 -->
+        <div class="player" id="p1">
+          <h2>Player 1</h2>
+          <p id="pointsOne"></p>
         </div>
-        <div id="rowTwo">
-          <div class="box" id="d"></div>
-          <div class="box" id="e"></div>
-          <div class="box" id="f"></div>
+        <!-- Game Div -->
+        <div id="gamePlan">
+          <div id="rowOne">
+            <div class="box" id="a"></div>
+            <div class="box" id="b"></div>
+            <div class="box" id="c"></div>
+          </div>
+          <div id="rowTwo">
+            <div class="box" id="d"></div>
+            <div class="box" id="e"></div>
+            <div class="box" id="f"></div>
+          </div>
+          <div id="rowThree">
+            <div class="box" id="g"></div>
+            <div class="box" id="h"></div>
+            <div class="box" id="i"></div>
+          </div>
         </div>
-        <div id="rowThree">
-          <div class="box" id="g"></div>
-          <div class="box" id="h"></div>
-          <div class="box" id="i"></div>
+        <!-- Player 2 -->
+        <div class="player" id="p2">
+          <h2>Player 2</h2>
+          <p id="pointsTwo"></p>
         </div>
       </div>
-    </div>
-    <div id="resetDiv">
-      <button id="resetBtn">Reset</button>
+      <!-- Reset Div -->
+      <div id="resetDiv">
+        <button id="resetBtn">Reset Game Board</button>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
